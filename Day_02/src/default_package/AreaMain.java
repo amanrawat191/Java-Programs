@@ -21,7 +21,8 @@ public class AreaMain {
 	 System.out.println("Area of Circle="+c1.getArea());
 	 Area c2= new Circle(16.5); 
 	 System.out.println("Area of Circle="+c2.getArea());
-	 Area r1=new Area() {
+	 Area r1=new Area() { //ye ek subclass h
+		//ye class hai anoynimous class without name 
 		@Override
 		public double getArea() {
 			// TODO Auto-generated method stub
