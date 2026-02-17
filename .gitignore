@@ -1,0 +1,8 @@
+*.class
+/.metadata/
+# Eclipse Project Files (Junk)
+.metadata/
+.classpath
+.project
+.settings/
+.recommenders/
