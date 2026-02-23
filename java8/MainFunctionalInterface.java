@@ -18,7 +18,6 @@ public class MainFunctionalInterface {
         Add a = new Add(){    //Anoyminous class
             public int calculate (int n1, int n2){
                 return (n1 + n2);
-
             }
         };
         System.out.println("Sum="+a.calculate(23,34));
