@@ -2,8 +2,8 @@ package Interview_Question;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Optional;
-
 public class Javaquestion {
 
     static class Employee {
@@ -24,11 +24,13 @@ public class Javaquestion {
         public double getSalary() {
             return salary;
         }
+        public int getAge() {
+        	return age; 
+        }
 
-        // Optional but useful for printing
-//        public String toString() {
-//            return id + " " + name + " " + salary + " " + age + " " + department;
-//        }
+       public String toString() {
+         return id + " " + name + " " + salary + " " + age + " " + department;
+     }
     }
 
     public static void main(String[] args) {
@@ -55,5 +57,9 @@ public class Javaquestion {
                 .max((a, b) -> Double.compare(a.getSalary(), b.getSalary()));
 
         result2.ifPresent(System.out::println);
+        Optional<Employee> result3=empList.stream().min((a,b)->a.getAge()-b.getAge());
+        result3.ifPresent(System.out::println);
+        Optional<Employee> result5 = empList.stream().sorted(Comparator.comparing(Employee::getSalary).reversed()).skip(1).findFirst();
+        result5.ifPresent(System.out::println);
     }
 }
